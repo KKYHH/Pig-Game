@@ -71,7 +71,6 @@ btnRoll.addEventListener('click', function () {
 btnHold.addEventListener('click', function () {
   if (playing) {
 
-
     scores[activePlayer] += currentScore;
     document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
