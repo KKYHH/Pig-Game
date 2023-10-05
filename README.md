@@ -118,3 +118,5 @@ document.querySelector('.name');
 ---
 
 231005_16:45 ->>>>
+
+classList & element.remove
