@@ -111,12 +111,26 @@ document.querySelector('.name');
 `document.getElementById` 는 html 의 id 를 선택\
 `document.querySelector` 는 html 의 class 를 선택
 
----
+`classList`
 
----
+classList는 DOM 요소의 클래스 목록을 나타내는 JavaScript 객체이다. 클래스 추가,제거 및 토글 기능을 제공한다.
 
----
+- add
 
-231005_16:45 ->>>>
+```javascript
+diceEl.classList.add('hidden');
+```
 
-classList & element.remove
+지정된 요소에 hidden 클래스를 추가한다. 다른 사이트의 정보를 보고싶어서 개발자도구로 보면 hidden 이라는게 많이 보였었다. 그 땐 정확히 어떤 작용을 하는지 몰랐는데 `classList.add`를 통해서 해당 클래스를 부여하고 hidden CSS에 해당하는 작업을 넣을 수 있다는걸 알았다.
+
+- remove
+
+```javascript
+classList.remove('player--active');
+// diceEl.remove('hidden');
+diceEl.classList.add('hidden');
+```
+
+add와는 반대로 요소의 클래스를 삭제한다.
+
+클릭시 hidden 클래스를 추가해 요소를 없애는게 목적이였다. 처음에는 '`diceEl`에 hidden 클래스를 삭제한다' 라고 헷갈려 잘못된 생각으로 주석처리된 코드를 넣었는데 원하는 결과가 나와서 넘어갔었다가 뒤늦게 `classList`가 빠진걸 알았고 아래코드로 수정을 했다. 하지만 왜 같은 결과가 나온건지 이해가 안되서 살펴보았다
