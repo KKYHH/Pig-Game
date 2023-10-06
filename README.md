@@ -145,7 +145,6 @@ play 중에는 dice 클래스로만 잘 보인다
 <img src="./hidden2.png">
 
 게임이 종료되면 `diceEl.classList.add('hidden)` 으로 hidden 클래스가 추가되며 주사위는 사라진다.
-<br><br>
 
 `remove`
 <img src="./remove.png">
