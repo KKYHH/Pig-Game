@@ -138,15 +138,18 @@ add와는 반대로 요소의 클래스를 삭제한다.
 게임이 끝나면 dice 그림이 사라지는 기능
 
 `hidden`
+
 <img src="./hidden1.png">
 play 중에는 dice 클래스로만 잘 보인다
 
 <img src="./hidden2.png">
+
 게임이 종료되면 `diceEl.classList.add('hidden)` 으로 hidden 클래스가 추가되며 주사위는 사라진다.
 <br><br>
 
 `remove`
 <img src="./remove.png">
+
 반대로 `diceEl.remove('hidden');` 는 hidden과 상관없이 그냥 `diceEl`을 삭제해버리는 작용을 하는것 같다.
 
 삭제로 그림이 없어지다보니 처음에는 작동이 잘 된다고 생각하고 넘어갔었다. 앞으로 주의할 것
