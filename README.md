@@ -134,3 +134,45 @@ diceEl.classList.add('hidden');
 add와는 반대로 요소의 클래스를 삭제한다.
 
 클릭시 hidden 클래스를 추가해 요소를 없애는게 목적이였다. 처음에는 '`diceEl`에 hidden 클래스를 삭제한다' 라고 헷갈려 잘못된 생각으로 주석처리된 코드를 넣었는데 원하는 결과가 나와서 넘어갔었다가 뒤늦게 `classList`가 빠진걸 알았고 아래코드로 수정을 했다. 하지만 왜 같은 결과가 나온건지 이해가 안되서 살펴보았다
+
+게임이 끝나면 dice 그림이 사라지는 기능
+
+`hidden`
+<img src="./hidden1.png">
+play 중에는 dice 클래스로만 잘 보인다
+
+<img src="./hidden2.png">
+게임이 종료되면 `diceEl.classList.add('hidden)` 으로 hidden 클래스가 추가되며 주사위는 사라진다.
+<br><br>
+
+`remove`
+<img src="./remove.png">
+반대로 `diceEl.remove('hidden');` 는 hidden과 상관없이 그냥 `diceEl`을 삭제해버리는 작용을 하는것 같다.
+
+삭제로 그림이 없어지다보니 처음에는 작동이 잘 된다고 생각하고 넘어갔었다. 앞으로 주의할 것
+
+- toggle
+
+```javascript
+player0El.classList.toggle('player--active');
+```
+
+클래스가 요소에 있다면 제거하고 없으면 추가한다. `player0El`에 `player--active` 클래스가 있으면 없애고 없으면 추가를 하는 기능이다. 버튼기능에 유용하게 쓰일 수 있을거 같다.
+
+- contains
+
+```javascript
+if (element.classList.contains('active')) {
+  // 클래스가 존재함
+}
+```
+
+지정된 클래스가 존재하면 `true`를 반환하고 없다면 `false`를 반환한다
+
+- replace
+
+```javascript
+element.classList.replace('old-class', 'new-class');
+```
+
+요소의 클래스를 다른 클래스로 교체한다
